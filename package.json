@@ -1,0 +1,40 @@
+{
+  "name": "@mrfokus/vue-date-input",
+  "version": "0.1.0",
+  "description": "Компонент Vue 3 для ввода даты с разбивкой по полям (день, месяц, год). Позволяет удобно управлять форматом даты, фокусом, валидацией и автопереходом между полями",
+  "keywords": ["vue", "date-input", "date", "input"],
+  "author": {
+    "name": "mrfokus",
+    "url": "https://github.com/mrfokus"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrfokus/vue-input-date.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mrfokus/vue-input-date.git/issues"
+  },
+  "homepage": "https://github.com/mrfokus/vue-input-date.git#readme",
+  "bin": {
+    "@mrfokus/vue-date-picker": "./cli/init.js"
+  },
+  "scripts": {
+    "build": "tsup cli/init.ts --format esm --target node20 --out-dir cli"
+  },
+  "files": ["components", "cli", "types"],
+  "type": "module",
+  "dependencies": {
+    "fs-extra": "^11.1.1",
+    "inquirer": "^12.8.2",
+    "prompts": "^2.4.2"
+  },
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "vue": "^3.0.0"
+  }
+}
