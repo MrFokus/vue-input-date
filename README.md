@@ -13,7 +13,7 @@ npx @mrfokus/input-date
 ```vue
 <script setup lang="ts">
 import { ref } from 'vue'
-import {InputDate} from 'path_component'
+import InputDate from 'path_componen/InputDate.vue'
 
 const date = ref(new Date())
 </script>
