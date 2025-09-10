@@ -296,10 +296,6 @@ function onBackspace(ev: KeyboardEvent, name: string) {
   ) {
     const index = inputs.value.findIndex((i) => i.name === name);
     const prev = inputs.value[index - 1];
-    if (prev) {
-      ev.preventDefault();
-      prev.focus();
-    }
   }
   if (value.value[name]) value.value[name].value = target.value;
   emit("update:modelValue", toDate());
