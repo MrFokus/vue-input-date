@@ -153,9 +153,6 @@ function onInputDay(ev: InputEvent, name: string, length: number) {
     }
     if (+target.value < 10) {
       target.value = target.value.padStart(length, "0");
-      if (target.value == "00") {
-        target.value = "01";
-      }
     } else if (+target.value > 10) {
       focusNext(ev, name);
     }
@@ -343,7 +340,10 @@ function toDate() {
     value?.value &&
     value.value?.yyyy?.value &&
     value.value?.mm?.value &&
-    value.value?.dd?.value
+    value.value?.dd?.value &&
+    Number(value.value?.yyyy?.value) &&
+    Number(value.value?.mm?.value) &&
+    Number(value.value?.dd?.value)
   ) {
     date.setFullYear(
       +value.value.yyyy.value,
