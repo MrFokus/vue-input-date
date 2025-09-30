@@ -346,6 +346,7 @@ function toDate() {
       +value.value.mm.value - 1,
       +value.value.dd.value
     );
+    date.setHours(0, 0, 0, 0);
     return date;
   }
   return null;
