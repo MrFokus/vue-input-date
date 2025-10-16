@@ -130,6 +130,7 @@ watch(
   () => props.modelValue,
   () => {
     if (props.modelValue) fromDate(props.modelValue);
+    else toEmpty();
   },
   { deep: true, immediate: true }
 );
@@ -362,6 +363,13 @@ function fromDate(date: Date) {
       value.value.yyyy.length,
       "0"
     );
+  }
+}
+function toEmpty() {
+  if (value.value.dd && value.value.mm && value.value.yyyy) {
+    value.value.dd.value = "";
+    value.value.mm.value = "";
+    value.value.yyyy.value = "";
   }
 }
 </script>
